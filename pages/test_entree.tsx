@@ -9,10 +9,10 @@ const QuestionnairePage: React.FC = () => {
     <div style={{ backgroundColor: '#b6e0f9', minHeight: '100vh', position: 'relative' }}>
       
       {/* Bouton retour à l'accueil */}
-      <div style={{ position: 'absolute', top: '20px', left: '20px' }}>
+      <div style={{ position: 'absolute', top: '20px', left: '20px', marginTop: '25px' }}>
         <Link href="/">
           <button style={{ backgroundColor: 'transparent', border: 'none', cursor: 'pointer' }}>
-            <span style={{ fontSize: '3rem' }}>&larr;</span>
+            <div className="long-arrow-left"></div>
           </button>
         </Link>
       </div>
@@ -21,7 +21,7 @@ const QuestionnairePage: React.FC = () => {
       <div style={{ position: 'absolute', top: '20px', right: '20px' }}>
         <Link href="/">
           <button style={{ backgroundColor: 'transparent', border: 'none', cursor: 'pointer' }}>
-            <span style={{ fontSize: '3rem' }}>&times;</span>
+            <span style={{ fontSize: '4rem' }}>&times;</span>
           </button>
         </Link>
       </div>
@@ -43,7 +43,7 @@ const QuestionnairePage: React.FC = () => {
 
       {/* Bouton Continuer */}
       <div className="" style={{ position: 'absolute', bottom: '10%', textAlign: 'center' }}>
-        <p style={{ textAlign: 'left', marginBottom: '20px', padding: '0 50px' }}>Ceci est un test préventif et non pas un diagnostic précis. Pour connaître vos difficultés précises, veuillez consulter un professionnel.</p>
+        <p style={{ textAlign: 'left', marginBottom: '20px', padding: '0 50px' }}>Ceci est un test indicatif et non pas un diagnostic précis. Pour connaître vos difficultés précises, veuillez consulter un professionnel.</p>
         <ContinuerBtn />
       </div>
     </div>

@@ -1,7 +1,6 @@
 "use client"
 
 import { Button } from '@/components/ui/button'
-import { signIn } from 'next-auth/react'
 import React from 'react'
 import Link from 'next/link';
 
@@ -21,10 +20,12 @@ const ContinuerBtn = () => {
         height: '2.25rem',
         display: 'inline-flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        fontSize: '14px',
+        fontFamily: 'font_estudys'
       }}>
         <span style={{ marginRight: '0.5rem' }}>Continuer</span>
-        <span style={{ width: '15px', height: '20px', fontSize: '15px' }}>&rarr;</span>
+        <span style={{ width: '15px', fontSize: '15px' }}>&rarr;</span>
       </Button>
     </Link>
   )

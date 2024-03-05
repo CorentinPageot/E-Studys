@@ -9,8 +9,8 @@ const LoginButton = () => {
     <Button className="bg-blue-200 hover:bg-blue-300 text-black font-normal py-3 px-6 rounded-md mt-5 border-b border-r border-gray-400" 
     onClick={() => {
       signIn()
-    }} style={{ width: '20rem', backgroundColor: '#b6e0f9' }}>
-      <span className="mr-4">J'ai déjà un compte</span>
+    }} style={{ width: '20rem', backgroundColor: '#b6e0f9', fontFamily: 'font_estudys' }}>
+      <span style={{ marginRight: '1.3rem' }}>J'ai déjà un compte</span>
       <span>&rarr;</span>
     </Button>
   )
