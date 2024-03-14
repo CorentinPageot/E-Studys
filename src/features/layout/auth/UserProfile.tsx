@@ -19,7 +19,7 @@ const UserProfile = async () => {
         <DropdownMenuItem asChild>
           <Link href="/profile">
             <User2 className='mr-2 h-4 w-4' />
-              Profile
+              Compte
             </Link>
         </DropdownMenuItem>
         <DropdownMenuItemLogout />
