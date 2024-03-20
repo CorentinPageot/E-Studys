@@ -42,7 +42,7 @@ const QuestionnairePage: React.FC = () => {
       </div>
 
       {/* Bouton Continuer */}
-      <div className="" style={{ position: 'absolute', bottom: '10%', textAlign: 'center' }}>
+      <div className="" style={{ position: 'absolute', bottom: '5%', textAlign: 'center' }}>
         <p style={{ textAlign: 'left', marginBottom: '20px', padding: '0 50px' }}>Ceci est un test indicatif et non pas un diagnostic précis. Pour connaître vos difficultés précises, veuillez consulter un professionnel.</p>
         <ContinuerBtn />
       </div>

@@ -8,6 +8,7 @@ const ContinuerBtn = () => {
   return (
     <Link href="/test_entree">
       <Button className="bg-green-500 hover:bg-green-600 text-black font-normal py-3 px-6 rounded-md border-b border-r border-gray-400" style={{
+        position: 'relative',
         width: '20rem',
         backgroundColor: '#6fbb7b',
         color: 'black',
@@ -22,13 +23,16 @@ const ContinuerBtn = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: '14px',
-        fontFamily: 'font_estudys'
+        fontFamily: 'font_estudys',
+        textDecoration: 'none',
+        marginRight: 'auto'
       }}>
-        <span style={{ marginRight: '0.5rem' }}>Continuer</span>
-        <span style={{ width: '15px', fontSize: '15px' }}>&rarr;</span>
+        <span>Continuer</span>
+        <span style={{ position: 'absolute', right: '1.3rem', top: '50%', transform: 'translateY(-50%)', zIndex: 2 }}>&rarr;</span>
       </Button>
     </Link>
   )
 }
 
 export default ContinuerBtn
+
