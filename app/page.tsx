@@ -15,7 +15,7 @@ export default async function Home() {
         <Image src="/img/logo_estudys.png" width={100} height={200} alt="Logo E-Studys" style={{ marginBottom: '2rem' }} />
       </div>
       <h1 style={{ padding: '0 25%', fontFamily: 'font_estudys' }}>Une éducation adaptée à tous les dys</h1>
-      <div className="" style={{ width: '100%', position: 'absolute', bottom: '10%', textAlign: 'center' }}>
+      <div className="" style={{ width: '100%', position: 'absolute', bottom: '5%', textAlign: 'center' }}>
         <TestEntreeBtn />
         {session?.user ? (
             <UserProfile />

@@ -1,30 +1,14 @@
 import React, { useState } from 'react';
 import '../src/css/style.css';
 import ContinuerBtn from "../src/features/layout/btn/ContinuerBtn";
+import Menu from "../src/features/layout/Menu";
 import Image from 'next/image';
-import Link from 'next/link';
 
 const QuestionnairePage: React.FC = () => {
   return (
     <div style={{ backgroundColor: '#b6e0f9', minHeight: '100vh', position: 'relative' }}>
       
-      {/* Bouton retour à l'accueil */}
-      <div style={{ position: 'absolute', top: '20px', left: '20px', marginTop: '25px' }}>
-        <Link href="/">
-          <button style={{ backgroundColor: 'transparent', border: 'none', cursor: 'pointer' }}>
-            <div className="long-arrow-left"></div>
-          </button>
-        </Link>
-      </div>
-
-      {/* Bouton pour revenir à l'accueil */}
-      <div style={{ position: 'absolute', top: '20px', right: '20px' }}>
-        <Link href="/">
-          <button style={{ backgroundColor: 'transparent', border: 'none', cursor: 'pointer' }}>
-            <span style={{ fontSize: '4rem' }}>&times;</span>
-          </button>
-        </Link>
-      </div>
+      <Menu link1="/test_entree" link2="/" />
 
       {/* Logo de l'application */}
       <div style={{ textAlign: 'center', paddingTop: '11.5rem' }}>
@@ -42,9 +26,9 @@ const QuestionnairePage: React.FC = () => {
       </div>
 
       {/* Bouton Continuer */}
-      <div className="" style={{ position: 'absolute', bottom: '10%', textAlign: 'center' }}>
+      <div className="" style={{ position: 'absolute', bottom: '5%', textAlign: 'center' }}>
         <p style={{ textAlign: 'left', marginBottom: '20px', padding: '0 50px' }}>Ceci est un test indicatif et non pas un diagnostic précis. Pour connaître vos difficultés précises, veuillez consulter un professionnel.</p>
-        <ContinuerBtn />
+        <ContinuerBtn href="/test_entree_template" />
       </div>
     </div>
   );

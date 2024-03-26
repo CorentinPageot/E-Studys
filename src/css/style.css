@@ -31,4 +31,17 @@ body {
     transform: rotate(-45deg) translate(9px, 3px);
     left: 0;
     top: 0;
-  }
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+.active img {
+    background-color: yellow;
+    border-radius: 50px;
+}
+
+.exercice {
+    background-color: #6fbb7b;
+}
