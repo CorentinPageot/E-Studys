@@ -4,18 +4,13 @@ import { Button } from '@/components/ui/button'
 import React from 'react'
 import Link from 'next/link';
 
-{/* on passe une prop au composant ContinuerBtn pour spécifier le lien cible */}
-interface ContinuerBtnProps {
-  href: string;
-}
-
-const ContinuerBtn: React.FC<ContinuerBtnProps> = ({ href }) => {
+const ParfoisBtn = () => {
   return (
-    <Link href={href}>
+    <Link href="/test_entree_fin">
       <Button className="bg-green-500 hover:bg-green-600 text-black font-normal py-3 px-6 rounded-md border-b border-r border-gray-400" style={{
         position: 'relative',
         width: '20rem',
-        backgroundColor: '#6fbb7b',
+        backgroundColor: '#FEEA0A',
         color: 'black',
         fontWeight: 'normal',
         padding: '0.75rem 1.5rem',
@@ -32,12 +27,12 @@ const ContinuerBtn: React.FC<ContinuerBtnProps> = ({ href }) => {
         textDecoration: 'none',
         marginRight: 'auto'
       }}>
-        <span>Continuer</span>
+        <span>Parfois</span>
         <span style={{ position: 'absolute', right: '1.3rem', top: '50%', transform: 'translateY(-50%)', zIndex: 2 }}>&rarr;</span>
       </Button>
     </Link>
   )
 }
 
-export default ContinuerBtn
+export default ParfoisBtn
 

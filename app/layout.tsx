@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import Header from "@/src/features/layout/Header";
-import Footer from "@/src/features/layout/Footer";
+//import Footer from "@/src/features/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="flex-1 max-w-lg m-auto py-14 w-full">
                 {children}
                 </div>
-                <Footer />
+                {/* <Footer /> */}
                 </div>
             </body>
         </html>

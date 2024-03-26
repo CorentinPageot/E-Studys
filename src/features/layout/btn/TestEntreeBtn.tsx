@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import React from 'react'
 import Link from 'next/link';
 
-const LoginButton = () => {
+const TestEntreeBtn = () => {
   return (
     <Link href="/test_entree">
       <Button className="bg-green-500 hover:bg-green-600 text-black font-normal py-3 px-6 rounded-md border-b border-r border-green-700" style={{ 
@@ -20,4 +20,4 @@ const LoginButton = () => {
   )
 }
 
-export default LoginButton
+export default TestEntreeBtn
