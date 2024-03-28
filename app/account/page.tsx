@@ -3,15 +3,16 @@ import { getAuthSession } from "@/lib/auth";
 import UserProfile from '../../src/features/layout/auth/UserProfile'
 import LoginButton from "../../src/features/layout/auth/LoginButton";
 
-export default async function Profile() {
-  const session = await getAuthSession();
+const Account: React.FC = () => {
+  // const session = await getAuthSession();
   return (
     <div>
-    {session?.user ? (
+    {/* {session?.user ? (
       <UserProfile />
       ) : (
       <LoginButton />
-    )}
+    )} */}
+    plop
     </div>
   )
 }

@@ -13,7 +13,7 @@ const ExercicesPage: React.FC = () => {
             {/* Boucle pour afficher les 2 premiers exos */}
             <div className='exercice' style={{ borderRadius: '10px', padding: '10px', paddingLeft: '30px', textAlign: 'left', width: '35%', position: 'relative', backgroundImage: 'url("/img/strawberry.svg")', backgroundPosition: 'bottom left', backgroundRepeat: 'no-repeat' }}>
                 <a href='/exercice' style={{ textDecoration: 'none', position: 'relative', zIndex: '1' }}>
-                    <h4 style={{ color: 'black' }}>Nom exo</h4>
+                    <h4 className='bg-white p-4'>Nom vvexo</h4>
                     <p style={{ color: '#5C5C5C' }}>Description courte exo</p>
                 </a>
             </div>

@@ -12,7 +12,7 @@ const ExercicePage: React.FC = () => {
 
       <div style={{padding: '100px 50px 0 50px'}}>
         <div style={{ backgroundColor: '#6fbb7b', borderRadius: '10px', padding: '10px', textAlign: 'center' }}>
-            <h4 style={{ fontSize: '17px' }}>Description longue exo</h4>
+            <h4 className="bg-red-500">Description longue exo</h4>
         </div>
 
         <p style={{ margin: '50px 0' }}>

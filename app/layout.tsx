@@ -16,12 +16,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en" className="h-full">
             <body className={clsx(inter.className, "bg-background h-full")}>
-                <div className="flex flex-col h-full" style={{ backgroundImage: `url('/img/fruits_background.png')` }}>
+                <div className="flex flex-col h-full">
                 <Header />
-                <div className="flex-1 max-w-lg m-auto py-14 w-full">
+                <div className="flex-1 max-w-lg m-auto w-full">
                 {children}
                 </div>
-                {/* <Footer /> */}
                 </div>
             </body>
         </html>
