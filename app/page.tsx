@@ -18,20 +18,34 @@ export default async function Home() {
     //     <div>No session</div>
     // );
 
-    return (
-      <div className="" style={{ textAlign: 'center', marginTop: '8rem', backgroundImage: `url('/img/fruits_background.png')` }}>
-        <div className="" style={{ display: 'flex', justifyContent: 'center' }}>
-          <Image src="/img/logo_estudys.png" width={100} height={200} alt="Logo E-Studys" style={{ marginBottom: '2rem' }} />
-        </div>
-        <h1>Une éducation adaptée à tous les dys</h1>
-        <div className="" style={{ width: '100%', position: 'absolute', bottom: '5%', textAlign: 'center' }}>
-          <TestEntreeBtn />
-          {session?.user ? (
-              <UserProfile />
-              ) : (
-              <LoginButton />
-            )}
-        </div>
-      </div>
-    )
+    console.log('plop');
+
+    if (session?.user) {
+        redirect('/home');
+    } else {
+        return (
+            <div
+                className="w-full h-full relative flex flex-col items-center justify-center"
+                style={{ backgroundImage: `url('/img/fruits_background.png')` }}>
+                <div className="flex flex-col items-center">
+                    <Image
+                        className="w-[78px] h-auto"
+                        src="/img/logo.png"
+                        width={78}
+                        height={116}
+                        alt="Logo E-Studys"
+                        priority
+                    />
+                    <span className="text-2xl font-bold">E-Studys</span>
+                </div>
+                <span className="text-sm font-normal">
+                    {"L'éducation adaptée à tous les dys"}
+                </span>
+                <div className="absolute bottom-5 flex flex-col">
+                    <TestEntreeBtn />
+                    <LoginButton />
+                </div>
+            </div>
+        );
+    }
 }

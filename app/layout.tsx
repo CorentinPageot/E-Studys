@@ -15,13 +15,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en" className="h-full">
-            <body className={clsx(inter.className, "bg-background h-full")}>
-                <div className="flex flex-col h-full">
-                {/* <Header /> */}
-                <div className="flex-1 max-w-lg m-auto w-full">
+            <body className={clsx(inter.className, "bg-background h-full")} style={{ fontFamily: 'font_estudys' }}>
                 {children}
-                </div>
-                </div>
             </body>
         </html>
     );
