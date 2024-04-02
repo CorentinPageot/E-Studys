@@ -12,22 +12,14 @@ import React, { useState, FC } from "react";
 export default async function Home() {
     const session = await getAuthSession();
 
-    // session?.user ? (
-    //     <div>There is a session</div>
-    // ) : (
-    //     <div>No session</div>
-    // );
-
-    console.log('plop');
-
     if (session?.user) {
         redirect('/home');
     } else {
         return (
             <div
-                className="w-full h-full relative flex flex-col items-center justify-center"
+                className="w-full h-full relative flex flex-col items-center justify-center gap-2"
                 style={{ backgroundImage: `url('/img/fruits_background.png')` }}>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center gap-2">
                     <Image
                         className="w-[78px] h-auto"
                         src="/img/logo.png"
@@ -39,7 +31,7 @@ export default async function Home() {
                     <span className="text-2xl font-bold">E-Studys</span>
                 </div>
                 <span className="text-sm font-normal">
-                    {"L'éducation adaptée à tous les dys"}
+                    Une éducation adaptée à tous les dys
                 </span>
                 <div className="absolute bottom-5 flex flex-col">
                     <TestEntreeBtn />
