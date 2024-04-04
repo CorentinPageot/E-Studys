@@ -20,6 +20,7 @@ const config: Config = {
 				"studys-green": "#6fbb7b",
 				"studys-blue": "#B6E0F9",
 				"studys-dark-blue": "#477DFF",
+				"studys-grey": "#5C5C5C",
 			},
 		},
 	},

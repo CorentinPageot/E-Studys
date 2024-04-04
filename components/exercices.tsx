@@ -17,7 +17,7 @@ function Exercise({ index, color, title, text, fruit, level }: ExerciseProps) {
       className={`text-xs bg-studys-${color} rounded-lg px-8 py-4 bg-left-bottom bg-no-repeat flex flex-col gap-2 relative`}
       style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
       <h3>{title}</h3>
-      <span className="text-[#5C5C5C]">{text}</span>
+      <span className="text-studys-grey">{text}</span>
 	  <span className='absolute text-studys-dark-blue right-1 top-2'>{`niv.${level}`}</span>
     </div>
   );

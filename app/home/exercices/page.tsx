@@ -1,98 +1,23 @@
+import ExerciseList from "@/components/exercices";
+import Selector from "@/components/select";
 import { FC } from "react";
 
 interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
     return (
-        <div style={{ minHeight: "100vh", position: "relative" }}>
-            <div
-                style={{
-                    backgroundColor: "#b6e0f9",
-                    paddingLeft: "20px",
-                    padding: "50px 0 20px 20px",
-                    marginBottom: "30px",
-                }}>
-                <h2
-                    style={{
-                        fontSize: "24px",
-                        marginTop: "0",
-                        marginBottom: "0",
-                    }}>
-                    Exercices
-                </h2>
-            </div>
-            <div
-                style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    justifyContent: "space-between",
-                    gap: "10px",
-                    padding: "0 20px",
-                }}>
-                {/* Boucle pour afficher les 2 premiers exos */}
-                <div
-                    className="exercice"
-                    style={{
-                        borderRadius: "10px",
-                        padding: "10px",
-                        paddingLeft: "30px",
-                        textAlign: "left",
-                        width: "35%",
-                        position: "relative",
-                        backgroundImage: 'url("/img/strawberry.svg")',
-                        backgroundPosition: "bottom left",
-                        backgroundRepeat: "no-repeat",
-                    }}>
-                    <a
-                        href="/exercice"
-                        style={{
-                            textDecoration: "none",
-                            position: "relative",
-                            zIndex: "1",
-                        }}>
-                        <h4 className="bg-white p-4">Nom exo</h4>
-                        <p style={{ color: "#5C5C5C" }}>
-                            Description courte exo
-                        </p>
-                    </a>
+        <div>
+            <h1 className="bg-studys-blue p-4 pt-8 text-2xl">Exercices</h1>
+            <div className="p-4 flex flex-col gap-4">
+                <div className="flex gap-2 text-studys-green">
+                    <Selector name="Tout" />
+                    <Selector name="Prononciation" />
+                    <Selector name="Association" />
                 </div>
-                <div
-                    className="exercice"
-                    style={{
-                        borderRadius: "10px",
-                        padding: "10px",
-                        paddingLeft: "30px",
-                        textAlign: "left",
-                        width: "35%",
-                        position: "relative",
-                        backgroundImage: 'url("/img/cherry.svg")',
-                        backgroundPosition: "bottom left",
-                        backgroundRepeat: "no-repeat",
-                    }}>
-                    <a
-                        href="/exercice"
-                        style={{
-                            textDecoration: "none",
-                            position: "relative",
-                            zIndex: "1",
-                        }}>
-                        <h4 style={{ color: "black" }}>Nom exo</h4>
-                        <p style={{ color: "#5C5C5C" }}>
-                            Description courte exo
-                        </p>
-                    </a>
-                </div>
-                {/* Fin boucle */}
-            </div>
 
-            <p
-                style={{
-                    textAlign: "center",
-                    color: "#5C5C5C",
-                    marginTop: "50px",
-                }}>
-                Psssstt ! Des exercices arrivent bientôt !
-            </p>
+                <ExerciseList />
+                <span className="text-studys-grey text-xs text-center mt-2">Psssstt ! Des exercices arrivent bientôt !</span>
+            </div>
         </div>
     );
 };
