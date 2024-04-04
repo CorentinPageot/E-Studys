@@ -17,7 +17,7 @@ export default async function Home() {
     } else {
         return (
             <div
-                className="w-full h-full relative flex flex-col items-center justify-center gap-2"
+                className="w-full h-full relative flex flex-col items-center justify-center gap-2 font-studys"
                 style={{ backgroundImage: `url('/img/fruits_background.png')` }}>
                 <div className="flex flex-col items-center gap-2">
                     <Image
@@ -30,7 +30,7 @@ export default async function Home() {
                     />
                     <span className="text-2xl font-bold">E-Studys</span>
                 </div>
-                <span className="text-sm font-normal">
+                <span className="text-sm">
                     Une éducation adaptée à tous les dys
                 </span>
                 <div className="absolute bottom-5 flex flex-col">

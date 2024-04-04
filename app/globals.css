@@ -3,6 +3,10 @@
 @tailwind utilities;
  
 @layer base {
+  @font-face {
+    font-family: 'Studys';
+    src: url(/src/fonts/OpenDyslexic-Regular.otf);
+  }
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
