@@ -16,6 +16,9 @@ const page: FC<pageProps> = ({}) => {
                 </div>
 
                 <ExerciseList />
+                <ExerciseList />
+                <ExerciseList />
+                <ExerciseList />
                 <span className="text-studys-grey text-xs text-center mt-2">Psssstt ! Des exercices arrivent bientôt !</span>
             </div>
         </div>

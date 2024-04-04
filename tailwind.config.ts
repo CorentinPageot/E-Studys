@@ -21,6 +21,7 @@ const config: Config = {
 				"studys-blue": "#B6E0F9",
 				"studys-dark-blue": "#477DFF",
 				"studys-grey": "#5C5C5C",
+				"studys-yellow": "#FEEA0A",
 			},
 		},
 	},
