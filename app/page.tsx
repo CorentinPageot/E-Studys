@@ -1,28 +1,43 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { getAuthSession } from "@/lib/auth";
-import UserProfile from '../src/features/layout/auth/UserProfile'
+import UserProfile from "../src/features/layout/auth/UserProfile";
 import LoginButton from "../src/features/layout/auth/LoginButton";
 import TestEntreeBtn from "../src/features/layout/btn/TestEntreeBtn";
-import Image from 'next/image'
-import '../src/css/style.css';
+import Image from "next/image";
+import "../src/css/style.css";
+import { redirect } from "next/navigation";
+import React, { useState, FC } from "react";
 
 export default async function Home() {
-  const session = await getAuthSession();
-  return (
-    <div className="" style={{ textAlign: 'center', marginTop: '8rem' }}>
-      <div className="" style={{ display: 'flex', justifyContent: 'center' }}>
-        <Image src="/img/logo_estudys.png" width={100} height={200} alt="Logo E-Studys" style={{ marginBottom: '2rem' }} />
-      </div>
-      <h1 style={{ padding: '0 25%', fontFamily: 'font_estudys' }}>Une éducation adaptée à tous les dys</h1>
-      <div className="" style={{ width: '100%', position: 'absolute', bottom: '5%', textAlign: 'center' }}>
-        <TestEntreeBtn />
-        {session?.user ? (
-            <UserProfile />
-            ) : (
-            <LoginButton />
-          )}
-      </div>
-    </div>
-  )
+    const session = await getAuthSession();
+
+    if (session?.user) {
+        redirect('/home');
+    } else {
+        return (
+            <div
+                className="w-full h-full relative flex flex-col items-center justify-center gap-2 font-studys"
+                style={{ backgroundImage: `url('/img/fruits_background.png')` }}>
+                <div className="flex flex-col items-center gap-2">
+                    <Image
+                        className="w-[78px] h-auto"
+                        src="/img/logo.png"
+                        width={78}
+                        height={116}
+                        alt="Logo E-Studys"
+                        priority
+                    />
+                    <span className="text-2xl font-bold">E-Studys</span>
+                </div>
+                <span className="text-sm">
+                    Une éducation adaptée à tous les dys
+                </span>
+                <div className="absolute bottom-5 flex flex-col">
+                    <TestEntreeBtn />
+                    <LoginButton />
+                </div>
+            </div>
+        );
+    }
 }
