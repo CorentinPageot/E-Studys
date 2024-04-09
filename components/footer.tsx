@@ -29,7 +29,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({ href, title, icon }) => {
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-white flex-none flex justify-around fixed bottom-0 h-[80px] w-full shadow-[0px_-2px_8px_0px_rgba(0,0,0,0.3)]">
+        <footer className="bg-white flex-none flex justify-around h-[80px] w-full shadow-[0px_-2px_8px_0px_rgba(0,0,0,0.3)]">
             <FooterLink href="/home" title="Accueil" icon="/img/home.svg" />
             <FooterLink href="/home/succes" title="Succès" icon="/img/success.svg" />
             <FooterLink href="/home/exercices" title="Exercices" icon="/img/exercises.svg" />
