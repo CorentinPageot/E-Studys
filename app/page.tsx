@@ -28,10 +28,10 @@ export default async function Home() {
                         alt="Logo E-Studys"
                         priority
                     />
-                    <span className="text-2xl font-bold">E-Studys</span>
+                    <span className="text-2xl font-bold" style={{fontFamily: 'font_estudys'}}>E-Studys</span>
                 </div>
-                <span className="text-sm">
-                    Une éducation adaptée à tous les dys
+                <span className="text-sm text-gray-600 px-[25%] py-0 text-center" style={{fontFamily: 'font_estudys'}}>
+                    L'éducation adaptée à tous les dys
                 </span>
                 <div className="absolute bottom-5 flex flex-col">
                     <TestEntreeBtn />
