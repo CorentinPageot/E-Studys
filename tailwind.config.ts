@@ -17,17 +17,23 @@ const config: Config = {
 				studys: "Studys",
 			},
 			colors: {
-				"studys-green": "#6fbb7b",
-				"studys-blue": "#B6E0F9",
-				"studys-dark-blue": "#477DFF",
-				"studys-grey": "#5C5C5C",
-				"studys-yellow": "#FEEA0A",
-				"studys-orange": "#EE7B31",
-				"studys-red": "#C70F0F",
-				"studys-black": "#1D1D1B",
+				studysGreen: "#6fbb7b",
+				studysBlue: "#B6E0F9",
+				studysDarkBlue: "#477DFF",
+				studysGrey: "#5C5C5C",
+				studysYellow: "#FEEA0A",
+				studysOrange: "#EE7B31",
+				studysRed: "#C70F0F",
+				studysBlack: "#1D1D1B",
 			},
 		},
 	},
 	plugins: [],
+	safelist: [
+		{
+			pattern:
+				/(bg|text|border)-studys(Green|Blue|DrakBlue|Grey|Yellow|Orange|Red|Black)/,
+		},
+	],
 };
 export default config;

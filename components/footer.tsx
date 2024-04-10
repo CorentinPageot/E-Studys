@@ -18,7 +18,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({ href, title, icon }) => {
     return (
         <Link href={href} legacyBehavior>
             <div className={`flex flex-col gap-1 items-center justify-center text-xs`}>
-                <div className={`${isActive ? 'bg-studys-yellow' : ''} w-[44px] h-[44px] rounded-full flex justify-center items-center`}>
+                <div className={`${isActive ? 'bg-studysYellow' : ''} w-[44px] h-[44px] rounded-full flex justify-center items-center`}>
                     <Image src={icon} width={24} height={24} alt={title} className="w-[24px] h-[24px]" />
                 </div>
                 {title}

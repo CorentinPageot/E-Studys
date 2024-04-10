@@ -16,7 +16,7 @@ const Home: FC<pageProps> = ({}) => {
 		<div className="py-8 px-4 flex flex-col gap-4">
 			<div className="flex flex-col gap-2">
 				<h2>Reprendre le dernier exercice</h2>
-				<div className="bg-studys-green rounded-lg py-2 px-[70px] relative bg-[url('/img/apple.svg')] bg-left-bottom bg-no-repeat flex flex-col gap-2">
+				<div className="bg-studysGreen rounded-lg py-2 px-[70px] relative bg-[url('/img/apple.svg')] bg-left-bottom bg-no-repeat flex flex-col gap-2">
 					<h3>Prononciation</h3>
 					<span>
 						Exercice sur la différence entre le son &quot;n&quot; et

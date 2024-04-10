@@ -1,34 +1,34 @@
-interface FooterLinkProps {
-    href: string;
-    title: string;
+import Image from "next/image";
+
+interface DatasStat {
     icon: string;
+    number: number;
+    description: string;
+    color: string
 }
 
-const FooterLink: React.FC<FooterLinkProps> = ({ href, title, icon }) => {
-    const pathname = usePathname();
-    const isActive = pathname ? pathname == href : false;
+const StatComponent: React.FC<DatasStat> = ({ icon, number, description, color }) => {
 
     return (
-        <Link href={href} legacyBehavior>
-            <div className={`flex flex-col gap-1 items-center justify-center text-xs`}>
-                <div className={`${isActive ? 'bg-studys-yellow' : ''} w-[44px] h-[44px] rounded-full flex justify-center items-center`}>
-                    <Image src={icon} width={24} height={24} alt={title} className="w-[24px] h-[24px]" />
-                </div>
-                {title}
+        <div className={`bg-studys${color} bg-opacity-10 border border-studys${color} rounded-lg flex p-2 gap-2`}>
+            <Image src={icon} width={16} height={16} alt={description} className="w-[16px] h-[16px]" />
+            <div className="flex flex-col gap-1">
+                <p className="text-sm">{number}</p>
+                <p className="text-studysGrey text-xs">{description}</p>
             </div>
-        </Link>
+        </div>
     );
 };
 
-const StatsProfile: React.FC = () => {
+const StatComponents: React.FC = () => {
     return (
-        <footer className="bg-white flex-none flex justify-around h-[80px] w-full shadow-[0px_-2px_8px_0px_rgba(0,0,0,0.3)]">
-            <FooterLink href="/home" title="Accueil" icon="/img/home.svg" />
-            <FooterLink href="/home/succes" title="Succès" icon="/img/success.svg" />
-            <FooterLink href="/home/exercices" title="Exercices" icon="/img/exercises.svg" />
-            <FooterLink href="/home/account" title="Compte" icon="/img/user.svg" />
+        <footer className="inline-grid grid-cols-2 gap-2 w-full">
+            <StatComponent icon="/img/fire.svg" number={2} description="Jours d'activité" color="Orange" />
+            <StatComponent icon="/img/clapping_hands.svg" number={2} description="Exo sans fautes" color="Green" />
+            <StatComponent icon="/img/brain.svg" number={8} description="Exercices réalisés" color="Yellow" />
+            <StatComponent icon="/img/bulb.svg" number={3} description="Récompenses" color="Blue" />
         </footer>
     );
 };
 
-export default StatsProfile;
+export default StatComponents;

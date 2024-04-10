@@ -14,11 +14,11 @@ function Exercise({ index, color, title, text, fruit, level }: ExerciseProps) {
 
   return (
     <div
-      className={`text-xs bg-studys-${color} rounded-lg px-8 py-4 bg-left-bottom bg-no-repeat flex flex-col gap-2 relative`}
+      className={`text-xs bg-studys${color} rounded-lg px-8 py-4 bg-left-bottom bg-no-repeat flex flex-col gap-2 relative`}
       style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
       <h3>{title}</h3>
-      <span className="text-studys-grey">{text}</span>
-	  <span className='absolute text-studys-dark-blue right-1 top-2'>{`niv.${level}`}</span>
+      <span className="text-studysGrey">{text}</span>
+	  <span className='absolute text-studysDarkBlue right-1 top-2'>{`niv.${level}`}</span>
     </div>
   );
 }
@@ -27,7 +27,7 @@ export default function ExerciseList() {
   const textExercises = [
     {
       index: 1,
-	  color: "green",
+	  color: "Green",
       title: "Prononciation",
       text: "Différence entre 'p' et 'q'",
       fruit: "strawberry",
@@ -35,7 +35,7 @@ export default function ExerciseList() {
     },
     {
       index: 2,
-	  color: "blue",
+	  color: "Blue",
       title: "Association",
       text: "Associe le mot avec l'image",
       fruit: "cherry",
@@ -43,7 +43,7 @@ export default function ExerciseList() {
     },
     {
       index: 3,
-	  color: "blue",
+	  color: "Blue",
       title: "Association",
       text: "Associe le mot avec l'image",
       fruit: "orange",
@@ -51,7 +51,7 @@ export default function ExerciseList() {
     },
     {
       index: 4,
-	  color: "green",
+	  color: "Green",
       title: "Prononciation",
       text: "Différence entre 'n' et 'm'",
       fruit: "peer",

@@ -5,7 +5,7 @@ import React from 'react'
 
 const LogoutButton = () => {
   return (
-    <button onClick={() => {signOut()}} className="text-studys-red">Se déconnecter</button>
+    <button onClick={() => {signOut()}} className="text-studysRed">Se déconnecter</button>
   )
 }
 
