@@ -13,7 +13,7 @@ const Layout: FC<LayoutProps> = async ({ children }) => {
 
     if (session?.user) {
             return (
-                <div className="flex flex-col h-full">
+                <div className="flex flex-col h-full max-w-[100vw] overflow-y-hidden">
                     <div className="overflow-auto grow">
                         {children}
                     </div>

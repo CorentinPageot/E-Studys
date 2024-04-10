@@ -1,21 +1,12 @@
 "use client"
 
-import { Button } from '@/components/ui/button'
-import { DropdownMenuItem } from '@/components/ui/dropdown-menu'
-
-import { LogOut } from 'lucide-react'
 import { signOut } from 'next-auth/react'
 import React from 'react'
 
-const DropdownMenuItemLogout = () => {
+const LogoutButton = () => {
   return (
-    <DropdownMenuItem onClick={() => {
-      signOut()
-    }}>
-      <LogOut className='mr-2 h-4 w-4' />
-      Déconnexion
-    </DropdownMenuItem>
+    <button onClick={() => {signOut()}} className="text-studysRed">Se déconnecter</button>
   )
 }
 
-export default DropdownMenuItemLogout
+export default LogoutButton

@@ -1,12 +1,38 @@
-import UserProfile from "@/src/features/layout/auth/UserProfile";
 import { FC } from "react";
+import { getAuthSession } from "@/lib/auth";
+import Image from "next/image";
+import LogoutButton from "@/src/features/layout/auth/LogoutButton";
+import StatComponents from "@/components/stats";
 
 interface pageProps {}
 
-const page: FC<pageProps> = ({}) => {
+
+
+const page: FC<pageProps> = async ({}) => {
+    const session = await getAuthSession();
+
+    console.log('session', session?.user);
     return (
-        <div>
-            <UserProfile />
+        <div className="flex flex-col">
+            <div className="h-[165px] flex items-center justify-center bg-gradient-to-b from-studysBlue to-white shadow-[0px_0px_10px_0px_#00000026]">
+                <Image className="rounded-full" src={session?.user.image} width={80} height={80} alt="pp" />
+            </div>
+            <div className="flex flex-col p-4 gap-2">
+                <div>
+                    <p className="text-2xl">{session?.user.name}</p>
+
+                </div>
+                <p className="text-studysGrey text-sm">{session?.user.email}</p>
+            </div>
+            <div className="w-full h-[1px] bg-[#D9D9D9]" />
+            <div className="p-4">
+                <p className="text-lg mb-2">Statistiques</p>
+                <StatComponents />
+            </div>
+            <div className="flex justify-between p-4 text-xs">
+                <LogoutButton />
+                <p className="text-studysGrey">Mention légales</p>
+            </div>
         </div>
     );
 };
