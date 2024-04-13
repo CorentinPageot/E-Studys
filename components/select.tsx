@@ -6,7 +6,7 @@ interface SelectorProps {
 
 const Selector: React.FC<SelectorProps> = ({ name }) => {
   return (
-    <div className='border border-studysGreen rounded-full py-0.5 px-3 text-sm'>{name}</div>
+    <div className='border border-studysGreen text-studysGreen rounded-full py-0.5 px-3 text-sm'>{name}</div>
   );
 };
 
