@@ -1,7 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { getAuthSession } from "@/lib/auth";
-import UserProfile from "../src/features/layout/auth/UserProfile";
 import LoginButton from "../src/features/layout/auth/LoginButton";
 import TestEntreeBtn from "../src/features/layout/btn/TestEntreeBtn";
 import Image from "next/image";
@@ -28,9 +25,9 @@ export default async function Home() {
                         alt="Logo E-Studys"
                         priority
                     />
-                    <span className="text-2xl font-bold" style={{fontFamily: 'font_estudys'}}>E-Studys</span>
+                    <span className="text-2xl font-bold">E-Studys</span>
                 </div>
-                <span className="text-sm text-gray-600 px-[25%] py-0 text-center" style={{fontFamily: 'font_estudys'}}>
+                <span className="text-sm text-gray-600 px-[25%] py-0 text-center">
                     L'éducation adaptée à tous les dys
                 </span>
                 <div className="absolute bottom-5 flex flex-col">

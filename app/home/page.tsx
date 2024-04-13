@@ -15,10 +15,10 @@ const Home: FC<pageProps> = ({}) => {
 	return (
 		<div className="py-8 px-4 flex flex-col gap-4">
 			<div className="flex flex-col gap-2">
-				<h2>Reprendre le dernier exercice</h2>
-				<div className="bg-studysGreen rounded-lg py-2 px-[70px] relative bg-[url('/img/apple.svg')] bg-left-bottom bg-no-repeat flex flex-col gap-2">
+				<h2 className="font-bold text-lg">Reprendre le dernier exercice</h2>
+				<div className="bg-studysGreen rounded-lg py-2 px-[70px] relative bg-[url('/img/apple.svg')] bg-left-bottom bg-no-repeat flex flex-col justify-between h-[100px]">
 					<h3>Prononciation</h3>
-					<span>
+					<span className="text-sm">
 						Exercice sur la différence entre le son &quot;n&quot; et
 						&quot;m&quot;
 					</span>
@@ -33,8 +33,8 @@ const Home: FC<pageProps> = ({}) => {
 				</div>
 			</div>
 
-			<div>
-				<h2>Mes exercices</h2>
+			<div className="flex flex-col gap-2">
+				<h2 className="font-bold text-lg">Mes exercices</h2>
 				
                 {/* Boucle pour afficher les 2 premiers exos */}
                 <ExercicesList />
@@ -44,6 +44,9 @@ const Home: FC<pageProps> = ({}) => {
                 {/* {showMoreExercises && (
                     <div>plop</div>
                 )} */}
+			</div>
+			<div className="flex flex-col gap-2">
+				<h2 className="font-bold text-lg">Mes Succès</h2>
 			</div>
 			{/* <div style={{ textAlign: "right", marginTop: "20px" }}>
 				<a
