@@ -21,6 +21,7 @@ const config: Config = {
 				studysBlue: "#B6E0F9",
 				studysDarkBlue: "#477DFF",
 				studysGrey: "#5C5C5C",
+				studysLightGrey: "#B3B3B3",
 				studysYellow: "#FEEA0A",
 				studysOrange: "#EE7B31",
 				studysRed: "#C70F0F",
