@@ -23,6 +23,7 @@ const config: Config = {
 				studysGrey: "#5C5C5C",
 				studysLightGrey: "#B3B3B3",
 				studysYellow: "#FEEA0A",
+				studysLightYellow: "#FFFAC7",
 				studysOrange: "#EE7B31",
 				studysRed: "#C70F0F",
 				studysBlack: "#1D1D1B",

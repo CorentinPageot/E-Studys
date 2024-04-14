@@ -21,9 +21,9 @@ function Success({ index, type, color, title, text, icon, progress }: SuccessPro
 				{progress !== 0 ? <Image src={iconUrl} width={64} height={64} alt={title} /> : <div className="text-[32px] text-studysLightGrey bg-studysGrey w-[58px] h-[58px] flex items-center justify-center rounded-full">?</div>}
 			</div>
 			<div className="p-4">
-				<h3 className={`pb-2`}>{title}</h3>
+				<h3 className={`pb-2 ${progress === 0 && 'text-studysGrey'}`}>{title}</h3>
 				<span className="text-sm">{text}</span>
-				{progress !== 0 && <div className="pt-2"><ProgressBar show={true} number={progress} color="studysYellow" bgColor="grey-500" /></div> }
+				{progress !== 0 && <div className="pt-2"><ProgressBar show={true} progress={progress} /></div> }
 			</div>
 		</div>
 	);
