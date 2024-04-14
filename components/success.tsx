@@ -13,8 +13,8 @@ function Success({ index, title, text, icon, progress }: SuccessProps) {
 	const iconUrl = `/img/${icon}.svg`;
 
 	return (
-		<div className="rounded-lg bg-studysOrange bg-opacity-40 ">
-			<div className="bg-studysOrange rounded-l-lg flex items-center">
+		<div className="grid grid-flow-row grid-cols-[96px_1fr] rounded-lg bg-studysOrange bg-opacity-40 ">
+			<div className="bg-studysOrange rounded-l-lg flex items-center justify-center">
 				<Image src={iconUrl} width={64} height={64} alt={title} />
 			</div>
 			<div className="p-2">
