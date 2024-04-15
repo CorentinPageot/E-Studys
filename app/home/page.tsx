@@ -3,6 +3,7 @@
 import React, { useState, FC } from "react";
 import Image from "next/image";
 import ExercicesList from "@/components/exercices";
+import SuccessList from "@/components/success";
 
 interface pageProps {}
 
@@ -47,6 +48,7 @@ const Home: FC<pageProps> = ({}) => {
 			</div>
 			<div className="flex flex-col gap-2">
 				<h2 className="font-bold text-lg">Mes Succès</h2>
+				<SuccessList typeSelected="challenge" showAll={false} />
 			</div>
 			{/* <div style={{ textAlign: "right", marginTop: "20px" }}>
 				<a
