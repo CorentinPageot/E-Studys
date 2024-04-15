@@ -38,7 +38,7 @@ const Home: FC<pageProps> = ({}) => {
 				<h2 className="font-bold text-lg">Mes exercices</h2>
 				
                 {/* Boucle pour afficher les 2 premiers exos */}
-                <ExercicesList />
+                <ExercicesList typeSelected="Tout" max={4} />
                 {/* Fin boucle */}
 
                 {/* Afficher plus de div si showMoreExercises est vrai */}
