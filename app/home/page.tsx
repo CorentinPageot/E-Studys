@@ -48,7 +48,7 @@ const Home: FC<pageProps> = ({}) => {
 			</div>
 			<div className="flex flex-col gap-2">
 				<h2 className="font-bold text-lg">Mes Succès</h2>
-				<SuccessList />
+				<SuccessList typeSelected="challenge" showAll={false} />
 			</div>
 			{/* <div style={{ textAlign: "right", marginTop: "20px" }}>
 				<a
