@@ -6,11 +6,15 @@ interface BarProps {
 }
 
 const ProgressBar: React.FC<BarProps> = ({ show, progress }) => {
-    // const color = 'studysYellow';
-	return (
+	return show ? (
 		<div
-			className={`text-[6px] bg-${show ? 'studysLightYellow' : 'studysLightGrey'} bg-opacity-80 rounded-full h-[${show ? '15' : '5'}px] w-full`}>
-			<div className={`bg-${show ? 'studysYellow' : 'studysGreen'} flex items-center justify-center rounded-full h-full`} style={{width: `${progress}%`}}>{show && <p>{progress}%</p>}</div>
+			className='text-[6px] bg-studysLightYellow bg-opacity-80 rounded-full h-[15px] w-full'>
+			<div className='bg-studysYellow flex items-center justify-center rounded-full h-full' style={{ width: `${progress}%` }}>{show && <p>{progress}%</p>}</div>
+		</div>
+	) : (
+		<div
+			className='text-[6px] bg-studysLightGrey bg-opacity-80 rounded-full h-[5px] w-full'>
+			<div className='bg-studysGreen flex items-center justify-center rounded-full h-full' style={{ width: `${progress}%` }}>{show && <p>{progress}%</p>}</div>
 		</div>
 	);
 };

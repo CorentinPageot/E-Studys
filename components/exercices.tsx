@@ -1,4 +1,6 @@
+import { redirect } from "next/dist/server/api-utils";
 import React from "react";
+import Link from "next/link";
 
 interface ExerciseProps {
 	index: number;
@@ -23,7 +25,12 @@ function Exercise({ index, color, title, text, fruit, level }: ExerciseProps) {
 	);
 }
 
-export default function ExerciseList() {
+interface ExercisesProps {
+	typeSelected: string;
+	max?: number;
+}
+
+export default function ExerciseList({typeSelected, max}:ExercisesProps) {
 	const textExercises = [
 		{
 			index: 1,
@@ -57,21 +64,42 @@ export default function ExerciseList() {
 			fruit: "peer",
 			level: 0,
 		},
+		{
+			index: 5,
+			color: "Green",
+			title: "Prononciation",
+			text: "Différence entre 'b' et 'p'",
+			fruit: "cherry",
+			level: 0,
+		},
+		{
+			index: 6,
+			color: "Green",
+			title: "Prononciation",
+			text: "Différence entre 'e' et 'a'",
+			fruit: "orange",
+			level: 0,
+		},
 	];
 
 	return (
-		<div className="inline-grid grid-cols-2 gap-2">
-			{textExercises.map((exercise, index) => (
-				<Exercise
-					key={index}
-					index={exercise.index}
-					color={exercise.color}
-					title={exercise.title}
-					text={exercise.text}
-					fruit={exercise.fruit}
-					level={exercise.level}
-				/>
-			))}
+		<div>
+			<div className="inline-grid grid-cols-2 gap-2">
+				{textExercises.map((exercise, index) => (
+					(typeSelected === 'Tout' || typeSelected === exercise.title) &&
+					<div key={index} className={max <= index && 'hidden'}>
+						<Exercise
+							index={exercise.index}
+							color={exercise.color}
+							title={exercise.title}
+							text={exercise.text}
+							fruit={exercise.fruit}
+							level={exercise.level}
+						/>
+					</div>
+				))}
+			</div>
+			{max && <Link href="/home/exercices" className="flex justify-end pt-2"><p className="text-[10px] border-b-[1px] border-b-black">Voir plus</p></Link>}
 		</div>
 	);
 }

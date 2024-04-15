@@ -32,9 +32,10 @@ function Success({ index, type, color, title, text, icon, progress }: SuccessPro
 interface SuccessTypeProps {
   typeSelected: string;
   showAll: boolean;
+  completionSelected?: string;
 }
 
-export default function SuccessList({typeSelected, showAll}: SuccessTypeProps) {
+export default function SuccessList({typeSelected, showAll, completionSelected}: SuccessTypeProps) {
 	const textSuccess = [
 		{
 			index: 1,
@@ -96,7 +97,8 @@ export default function SuccessList({typeSelected, showAll}: SuccessTypeProps) {
 		<div className="flex flex-col gap-2">
 			{textSuccess.map((success, index) => (
 				(showAll || success.title !== 'CHALLENGE À VENIR') &&
-				success.type === typeSelected && <Success
+				success.type === typeSelected &&
+				(completionSelected === 'Tout' || completionSelected === 'En cours' && success.progress !== 0 || completionSelected === 'Terminé' && success.progress === 0 || !completionSelected) && <Success
 					key={index}
 					index={success.index}
 					type={success.type}
