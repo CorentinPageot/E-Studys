@@ -6,8 +6,15 @@ import Selector from "@/components/select";
 
 interface pageProps {}
 
+const textSelectors = [
+	{ index: 0, name: "Tout" },
+	{ index: 1, name: "En cours" },
+	{ index: 2, name: "Terminé" },
+];
+
 const page: FC<pageProps> = ({}) => {
     const [typeSelected, setTypeSelected] = useState('challenge');
+    const [completionSelected, setCompletionSelected] = useState('Tout');
     return (
         <div>
             <div className="relative bg-studysBlue h-[90px] flex items-end font-bold">
@@ -19,11 +26,20 @@ const page: FC<pageProps> = ({}) => {
             <div className="p-4 flex flex-col gap-4">
                 <p className="text-sm">Ici, retrouve tous les challenges pour obtenir des récompenses !</p>
                 <div className="flex gap-2">
-                    <Selector name="Tout" />
-                    <Selector name="En cours" />
-                    <Selector name="Terminé" />
+                    {textSelectors.map((selector, index) => (
+						<div
+							key={index}
+							onClick={() =>
+								setCompletionSelected(selector.name.toString())
+							}>
+							<Selector
+								name={selector.name}
+								selected={completionSelected}
+							/>
+						</div>
+					))}
                 </div>
-                <SuccessList typeSelected={typeSelected} showAll={true} />
+                <SuccessList typeSelected={typeSelected} completionSelected={completionSelected} showAll={true} />
             </div>
         </div>
     )

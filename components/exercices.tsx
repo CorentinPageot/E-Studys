@@ -82,11 +82,6 @@ export default function ExerciseList({typeSelected, max}:ExercisesProps) {
 		},
 	];
 
-	if (!max) {
-		max = textExercises.length;
-		console.log(max);
-	}
-
 	return (
 		<div>
 			<div className="inline-grid grid-cols-2 gap-2">
