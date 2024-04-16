@@ -36,7 +36,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en" className="h-full">
-            {/* <body className={clsx(openDys.className, "h-full")}> */}
             <body className={`${openDys.variable} font-sans h-full`}>
                 {children}
             </body>

@@ -18,7 +18,7 @@ export default async function Home() {
                 style={{ backgroundImage: `url('/img/fruits_background.png')` }}>
                 <div className="flex flex-col items-center gap-2">
                     <Image
-                        className="w-[78px] h-auto"
+                        className="w-auto h-auto"
                         src="/img/logo.png"
                         width={78}
                         height={116}
